@@ -25,30 +25,39 @@ document.getElementById('triangle-calculate').addEventListener('click', function
     const previousTriangleSecondElement = getElementValueById('triangle-h-element');
     const newTriangleSecondElement = triangleSecondInputField;
     setTotalElementValueById('triangle-h-element', newTriangleSecondElement)
-
 })
 document.getElementById('rectangle-calculate').addEventListener('click', function(){
-    const triangleFirstInputField = getInputFieldValueById('rectangle-input-1');
-    const previousTriangleFirstElement = getElementValueById('rectangle-w-element');
-    const newTriangleFirstElement = triangleFirstInputField;
-    setTotalElementValueById('rectangle-w-element', newTriangleFirstElement)
+    const rectangleFirstInputField = getInputFieldValueById('rectangle-input-1');
+    const previousRectangleFirstElement = getElementValueById('rectangle-w-element');
+    const newRectangleFirstElement = rectangleFirstInputField;
+    setTotalElementValueById('rectangle-w-element', newRectangleFirstElement)
 
-    const triangleSecondInputField = getInputFieldValueById('rectangle-input-2');
-    const previousTriangleSecondElement = getElementValueById('rectangle-l-element');
-    const newTriangleSecondElement = triangleSecondInputField;
-    setTotalElementValueById('rectangle-l-element', newTriangleSecondElement)
-
+    const rectangleSecondInputField = getInputFieldValueById('rectangle-input-2');
+    const previousRectangleSecondElement = getElementValueById('rectangle-l-element');
+    const newRectangleSecondElement = rectangleSecondInputField;
+    setTotalElementValueById('rectangle-l-element', newRectangleSecondElement)
 })
 document.getElementById('parallelogram-calculate').addEventListener('click', function(){
-    const triangleFirstInputField = getInputFieldValueById('parallelogram-input-1');
-    const previousTriangleFirstElement = getElementValueById('parallelogram-b-element');
-    const newTriangleFirstElement = triangleFirstInputField;
-    setTotalElementValueById('parallelogram-b-element', newTriangleFirstElement)
+    const parallelogramFirstInputField = getInputFieldValueById('parallelogram-input-1');
+    const previousParallelogramFirstElement = getElementValueById('parallelogram-b-element');
+    const newParallelogramFirstElement = parallelogramFirstInputField;
+    setTotalElementValueById('parallelogram-b-element', newParallelogramFirstElement)
 
-    const triangleSecondInputField = getInputFieldValueById('parallelogram-input-2');
-    const previousTriangleSecondElement = getElementValueById('parallelogram-h-element');
-    const newTriangleSecondElement = triangleSecondInputField;
-    setTotalElementValueById('parallelogram-h-element', newTriangleSecondElement)
+    const parallelogramSecondInputField = getInputFieldValueById('parallelogram-input-2');
+    const previousParallelogramSecondElement = getElementValueById('parallelogram-h-element');
+    const newParallelogramSecondElement = parallelogramSecondInputField;
+    setTotalElementValueById('parallelogram-h-element', newParallelogramSecondElement)
+})
+document.getElementById('rhombus-calculate').addEventListener('click', function(){
+    const rhombusFirstInputField = getInputFieldValueById('rhombus-input-1');
+    const previousRhombusFirstElement = getElementValueById('rhombus-d1-element');
+    const newRhombusFirstElement = rhombusFirstInputField;
+    setTotalElementValueById('rhombus-d1-element', newRhombusFirstElement)
+
+    const rhombusSecondInputField = getInputFieldValueById('rhombus-input-2');
+    const previousRhombusSecondElement = getElementValueById('rhombus-d2-element');
+    const newRhombusSecondElement = rhombusSecondInputField;
+    setTotalElementValueById('rhombus-d2-element', newRhombusSecondElement)
 
 })
 
