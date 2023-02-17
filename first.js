@@ -39,3 +39,16 @@ document.getElementById('rectangle-calculate').addEventListener('click', functio
     setTotalElementValueById('rectangle-l-element', newTriangleSecondElement)
 
 })
+document.getElementById('parallelogram-calculate').addEventListener('click', function(){
+    const triangleFirstInputField = getInputFieldValueById('parallelogram-input-1');
+    const previousTriangleFirstElement = getElementValueById('parallelogram-b-element');
+    const newTriangleFirstElement = triangleFirstInputField;
+    setTotalElementValueById('parallelogram-b-element', newTriangleFirstElement)
+
+    const triangleSecondInputField = getInputFieldValueById('parallelogram-input-2');
+    const previousTriangleSecondElement = getElementValueById('parallelogram-h-element');
+    const newTriangleSecondElement = triangleSecondInputField;
+    setTotalElementValueById('parallelogram-h-element', newTriangleSecondElement)
+
+})
+
