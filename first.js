@@ -27,3 +27,15 @@ document.getElementById('triangle-calculate').addEventListener('click', function
     setTotalElementValueById('triangle-h-element', newTriangleSecondElement)
 
 })
+document.getElementById('rectangle-calculate').addEventListener('click', function(){
+    const triangleFirstInputField = getInputFieldValueById('rectangle-input-1');
+    const previousTriangleFirstElement = getElementValueById('rectangle-w-element');
+    const newTriangleFirstElement = triangleFirstInputField;
+    setTotalElementValueById('rectangle-w-element', newTriangleFirstElement)
+
+    const triangleSecondInputField = getInputFieldValueById('rectangle-input-2');
+    const previousTriangleSecondElement = getElementValueById('rectangle-l-element');
+    const newTriangleSecondElement = triangleSecondInputField;
+    setTotalElementValueById('rectangle-l-element', newTriangleSecondElement)
+
+})
