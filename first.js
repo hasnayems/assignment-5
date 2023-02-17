@@ -60,4 +60,16 @@ document.getElementById('rhombus-calculate').addEventListener('click', function(
     setTotalElementValueById('rhombus-d2-element', newRhombusSecondElement)
 
 })
+document.getElementById('pentagon-calculate').addEventListener('click', function(){
+    const pentagonFirstInputField = getInputFieldValueById('pentagon-input-1');
+    const previousPentagonFirstElement = getElementValueById('pentagon-p-element');
+    const newPentagonFirstElement = pentagonFirstInputField;
+    setTotalElementValueById('pentagon-p-element', newPentagonFirstElement)
+
+    const pentagonSecondInputField = getInputFieldValueById('pentagon-input-2');
+    const previousPentagonSecondElement = getElementValueById('pentagon-b-element');
+    const newPentagonSecondElement = pentagonSecondInputField;
+    setTotalElementValueById('pentagon-b-element', newPentagonSecondElement)
+
+})
 
