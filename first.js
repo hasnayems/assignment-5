@@ -34,10 +34,23 @@ function displayData(name, result) {
     `;
     container.appendChild(tr);
 }
+function randomColorGenerator(){
+    let char = [1,2,3,4,5,6,7,8,9,0,"a","b","c","d","e","f"];
+    
+    let randomIndex = Math.floor(Math.random() * char.length)
+    
+    let hexCode = "";
+    for(let i = 0; i < 6; i++) {
+    hexCode += char[randomIndex];
+    }
+    return "#" + hexCode;
+}
+// nav part
 document.getElementById('blog-btn').addEventListener('click', function(){
     window.location.href='blog.html'
 })
-document.getElementById('triangle-calculate').addEventListener('click', function(){
+// triangle part
+document.getElementById('triangle-calculate-btn').addEventListener('click', function(){
     serial += 1;
 
     const titleName = getElementStringById('triangle')
@@ -48,7 +61,6 @@ document.getElementById('triangle-calculate').addEventListener('click', function
         return;
     }
     const previousTriangleFirstElement = getElementStringById('triangle-b-element');
-    // console.log(previousTriangleFirstElement)
     const newTriangleFirstElement = triangleFirstInputField;
     setTotalElementValueById('triangle-b-element', newTriangleFirstElement)
 
@@ -67,6 +79,7 @@ document.getElementById('triangle-calculate').addEventListener('click', function
     
     displayData(titleName, triangleValue);
 })
+// edit-btn only for triangle part
 document.getElementById('edit-btn').addEventListener('click', function(){
     const previousTriangleFirstElement = getElementValueById('triangle-b-element');
     const newTriangleFirstElement = 'b';
@@ -76,6 +89,7 @@ document.getElementById('edit-btn').addEventListener('click', function(){
     const newTriangleSecondElement = 'h';
     setTotalElementValueById('triangle-h-element', newTriangleSecondElement)
 })
+// ok-btn only for triangle part
 document.getElementById('ok-btn').addEventListener('click', function(){
     const triangleFirstInputField = getInputFieldValueById('triangle-input-1');
     if(isNaN(triangleFirstInputField) || triangleFirstInputField <= 0){
@@ -90,7 +104,6 @@ document.getElementById('ok-btn').addEventListener('click', function(){
         alert('Please input a valid number.');
         return;
     }
-    // const previousTriangleSecondElement = getElementValueById('triangle-h-element');
     const newTriangleSecondElement = triangleSecondInputField;
     setTotalElementValueById('triangle-h-element', newTriangleSecondElement)
     
@@ -102,11 +115,10 @@ document.getElementById('ok-btn').addEventListener('click', function(){
     const newResult = updatedTriangleValue;
     setTotalElementValueById('result', newResult)
 
-    // const titleName = getElementStringById('triangle')
-
     displayData(titleName, newResult);
 })
-document.getElementById('rectangle-calculate').addEventListener('click', function(){
+// rectangle part
+document.getElementById('rectangle-calculate-btn').addEventListener('click', function(){
     serial += 1;
 
     const titleName = document.getElementById("rectangle").innerText;
@@ -133,7 +145,8 @@ document.getElementById('rectangle-calculate').addEventListener('click', functio
 
     displayData(titleName, rectangleValue);
 })
-document.getElementById('parallelogram-calculate').addEventListener('click', function(){
+// parallelogram part
+document.getElementById('parallelogram-calculate-btn').addEventListener('click', function(){
     serial += 1;
 
     const titleName = document.getElementById("parallelogram").innerText;
@@ -160,7 +173,8 @@ document.getElementById('parallelogram-calculate').addEventListener('click', fun
 
     displayData(titleName, parallelogramValue);
 })
-document.getElementById('rhombus-calculate').addEventListener('click', function(){
+// rhombus part
+document.getElementById('rhombus-calculate-btn').addEventListener('click', function(){
     serial += 1;
 
     const titleName = document.getElementById("rhombus").innerText;
@@ -189,7 +203,8 @@ document.getElementById('rhombus-calculate').addEventListener('click', function(
 
     displayData(titleName, rhombusValue);
 })
-document.getElementById('pentagon-calculate').addEventListener('click', function(){
+// pentagon part
+document.getElementById('pentagon-calculate-btn').addEventListener('click', function(){
     serial += 1;
 
     const titleName = document.getElementById("pentagon").innerText;
@@ -218,7 +233,8 @@ document.getElementById('pentagon-calculate').addEventListener('click', function
 
     displayData(titleName, pentagonValue);
 })
-document.getElementById('ellipse-calculate').addEventListener('click', function(){
+// ellipse part
+document.getElementById('ellipse-calculate-btn').addEventListener('click', function(){
     serial += 1;
 
     const titleName = document.getElementById("ellipse").innerText;

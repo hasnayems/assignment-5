@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/50ec3bb4f0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="flex justify-between bg-emerald-100 m-10 px-10 py-5 rounded-lg items-center">
+    <nav id="nav" class="flex justify-between bg-emerald-300 m-10 px-10 py-5 rounded-lg items-center">
         <div>
             <h1 class="text-5xl font-semibold">Interactive</h1>
             <p class="text-3xl">Geometry Genius</p>
@@ -20,13 +20,13 @@
     </nav>
     <section class="flex justify-between m-10 gap-3">
         <div class="grid grid-cols-3 text-center gap-3">
-            <div id="d-1" class="p-10 bg-red-200 rounded-lg">
+            <div id="d-1" class="p-10 bg-red-300 rounded-lg hover:bg-red-500">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/triangle.png" alt="">
                 <h3 id="triangle" class="text-3xl font-semibold">Triangle</h3>
                 <p>Area (A) = <span id="triangle-0.5-element">0.5</span>*<span id="triangle-b-element">b</span>*<span id="triangle-h-element">h</span> <span id="edit-btn"><i class="fa-regular fa-pen-to-square"></i></span></p>
                 <input id="triangle-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span>
                 <input id="triangle-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="h"> <span>cm</span> <span id="ok-btn"><i class="fa-solid fa-square-check"></i></span><br>
-                <button id="triangle-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
+                <button id="triangle-calculate-btn" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/rectangle.png" alt="">
@@ -34,7 +34,7 @@
                 <p>Area (A) = <span id="rectangle-w-element">w</span>*<span id="rectangle-l-element">l</span></p>
                 <input id="rectangle-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="w"> <span>cm</span>
                 <input id="rectangle-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="l"> <span>cm</span><br>
-                <button id="rectangle-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
+                <button id="rectangle-calculate-btn" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/parallelogram.png" alt="">
@@ -42,15 +42,15 @@
                 <p>Area (A) = <span id="parallelogram-b-element">b</span>*<span id="parallelogram-h-element">h</p>
                 <input id="parallelogram-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span>
                 <input id="parallelogram-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="h"> <span>cm</span><br>
-                <button id="parallelogram-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
+                <button id="parallelogram-calculate-btn" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
-            <div class="p-10 bg-teal-200 rounded-lg">
+            <div class="p-10 bg-slate-300 rounded-lg hover:bg-slate-500">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/rhombus.png" alt="">
                 <h3 id="rhombus" class="text-3xl font-semibold">Rhombus</h3>
                 <p>Area (A) = <span id="rhombus-0.5-element">0.5</span>*<span id="rhombus-d1-element">d<span><sub>1</sub></span></span>*<span id="rhombus-d2-element">d<span><sub>2</sub></span></span></p>
                 <input id="rhombus-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="d1"> <span>cm</span>
                 <input id="rhombus-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="d2"> <span>cm</span><br>
-                <button id="rhombus-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
+                <button id="rhombus-calculate-btn" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/pentagon.png" alt="">
@@ -58,15 +58,15 @@
                 <p>Area (A) = <span id="pentagon-0.5-element">0.5</span>*<span id="pentagon-p-element">p</span>*<span id="pentagon-b-element">b</span></p>
                 <input id="pentagon-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="p"> <span>cm</span>
                 <input id="pentagon-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span><br>
-                <button id="pentagon-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
+                <button id="pentagon-calculate-btn" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/ellipse.png" alt="">
                 <h3 id="ellipse" class="text-3xl font-semibold">Ellipse</h3>
-                <p>Area (A) = <span id="ellipse-PI-element"><i class="fa-solid fa-pi"></i></span><span id="ellipse-a-element">a</span><span id="ellipse-b-element">b</span></p>
+                <p>Area (A) = <span id="ellipse-PI-element">PI</span><span id="ellipse-a-element">a</span><span id="ellipse-b-element">b</span></p>
                 <input id="ellipse-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="a"> <span>cm</span>
                 <input id="ellipse-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span><br>
-                <button id="ellipse-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
+                <button id="ellipse-calculate-btn" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
         </div>
         <div class="border-2 w-1/3 h-80 rounded-lg">
