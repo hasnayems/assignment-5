@@ -29,7 +29,7 @@ function displayData(name, result) {
       <td>${name}</td>
       <td><span id="result">${result}</span>cm<span><sup>2</sup></span></td>
       <td>
-      <button id="converter-btn" class="bg-sky-500 px-2 rounded-md w-32">Convert to m<span><sup>2</sup></span></button>
+      <button class="bg-sky-500 px-2 rounded-md w-32">Convert to m<span><sup>2</sup></span></button>
       </td> 
     `;
     container.appendChild(tr);
@@ -116,12 +116,6 @@ document.getElementById('ok-btn').addEventListener('click', function(){
     setTotalElementValueById('result', newResult)
 
     displayData(titleName, newResult);
-})
-// converter part
-document.getElementById('converter-btn').addEventListener('click', function(){
-    const previousResult = getElementValueById('result');
-    const convertedResult = previousResult / 100;
-    setTotalElementValueById('result', convertedResult )
 })
 // rectangle part
 document.getElementById('rectangle-calculate-btn').addEventListener('click', function(){
