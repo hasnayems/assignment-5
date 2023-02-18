@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment 5</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/50ec3bb4f0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="flex justify-between bg-emerald-100 m-10 px-10 py-5 rounded-lg items-center">
@@ -14,17 +15,17 @@
             <p class="text-3xl">Geometry Genius</p>
         </div>
         <div>
-            <button class="bg-sky-500 px-5 py-1 rounded-md">Blog</button>
+            <button id="blog-btn" class="bg-sky-500 px-5 py-1 rounded-md">Blog</button>
         </div>
     </nav>
     <section class="flex justify-between m-10 gap-3">
         <div class="grid grid-cols-3 text-center gap-3">
-            <div id="div-1" class="p-10 bg-red-200 rounded-lg">
+            <div id="d-1" class="p-10 bg-red-200 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/triangle.png" alt="">
                 <h3 id="triangle" class="text-3xl font-semibold">Triangle</h3>
-                <p>Area (A) = <span id="triangle-0.5-element">0.5</span>*<span id="triangle-b-element">b</span>*<span id="triangle-h-element">h</span></p>
+                <p>Area (A) = <span id="triangle-0.5-element">0.5</span>*<span id="triangle-b-element">b</span>*<span id="triangle-h-element">h</span> <span id="edit-btn"><i class="fa-regular fa-pen-to-square"></i></span></p>
                 <input id="triangle-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span>
-                <input id="triangle-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="h"> <span>cm</span><br>
+                <input id="triangle-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="h"> <span>cm</span> <span id="ok-btn"><i class="fa-solid fa-square-check"></i></span><br>
                 <button id="triangle-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
             <div class="border-2 p-10 rounded-lg">
@@ -37,7 +38,7 @@
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/parallelogram.png" alt="">
-                <h3 class="text-3xl font-semibold">Parallelogram</h3>
+                <h3 id="parallelogram" class="text-3xl font-semibold">Parallelogram</h3>
                 <p>Area (A) = <span id="parallelogram-b-element">b</span>*<span id="parallelogram-h-element">h</p>
                 <input id="parallelogram-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span>
                 <input id="parallelogram-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="h"> <span>cm</span><br>
@@ -45,15 +46,15 @@
             </div>
             <div class="p-10 bg-teal-200 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/rhombus.png" alt="">
-                <h3 class="text-3xl font-semibold">Rhombus</h3>
-                <p>Area (A) = <span id="rhombus-0.5-element">0.5</span>*<span id="rhombus-d1-element">d1</span>*<span id="rhombus-d2-element">d2</span></p>
+                <h3 id="rhombus" class="text-3xl font-semibold">Rhombus</h3>
+                <p>Area (A) = <span id="rhombus-0.5-element">0.5</span>*<span id="rhombus-d1-element">d<span><sub>1</sub></span></span>*<span id="rhombus-d2-element">d<span><sub>2</sub></span></span></p>
                 <input id="rhombus-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="d1"> <span>cm</span>
                 <input id="rhombus-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="d2"> <span>cm</span><br>
                 <button id="rhombus-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/pentagon.png" alt="">
-                <h3 class="text-3xl font-semibold">Pentagon</h3>
+                <h3 id="pentagon" class="text-3xl font-semibold">Pentagon</h3>
                 <p>Area (A) = <span id="pentagon-0.5-element">0.5</span>*<span id="pentagon-p-element">p</span>*<span id="pentagon-b-element">b</span></p>
                 <input id="pentagon-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="p"> <span>cm</span>
                 <input id="pentagon-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span><br>
@@ -61,8 +62,8 @@
             </div>
             <div class="border-2 p-10 rounded-lg">
                 <img class="mx-auto mb-5 h-40 w-48" src="/images/ellipse.png" alt="">
-                <h3 class="text-3xl font-semibold">Ellipse</h3>
-                <p>Area (A) = <span id="ellipse-PI-element">PI</span><span id="ellipse-a-element">a</span><span id="ellipse-b-element">b</span></p>
+                <h3 id="ellipse" class="text-3xl font-semibold">Ellipse</h3>
+                <p>Area (A) = <span id="ellipse-PI-element"><i class="fa-solid fa-pi"></i></span><span id="ellipse-a-element">a</span><span id="ellipse-b-element">b</span></p>
                 <input id="ellipse-input-1" class="bg-slate-200 w-1/4 pl-2 rounded-sm" type="text" placeholder="a"> <span>cm</span>
                 <input id="ellipse-input-2" class="bg-slate-200 w-1/4 mb-5 pl-2 rounded-sm" type="text" placeholder="b"> <span>cm</span><br>
                 <button id="ellipse-calculate" class="bg-sky-500  py-2 w-full rounded-lg text-xl">Calculate</button>
